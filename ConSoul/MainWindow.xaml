@@ -5,8 +5,40 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ConSoul"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        
+        Title="ConSoul" Height="480.783" Width="668.137" ResizeMode="NoResize">
+    <Grid Margin="0,0,0,0">
+        <Label Content="Botname:" HorizontalAlignment="Left" Margin="5,10,0,0" VerticalAlignment="Top" Height="26" Width="60"/>
+        <Label Content="Citnum:" HorizontalAlignment="Left" Margin="10,38,0,0" VerticalAlignment="Top" Height="26" Width="51"/>
+        <Label Content="PrivPass:" HorizontalAlignment="Left" Margin="10,66,0,0" VerticalAlignment="Top" Height="26" Width="55"/>
+        <Label Content="World:" HorizontalAlignment="Left" Margin="210,10,0,0" VerticalAlignment="Top" Height="26" Width="45"/>
+        <Label Content="Coords:" HorizontalAlignment="Left" Margin="210,66,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.988,0.263" Height="26" Width="50"/>
+        <Label Content="Avatar:" HorizontalAlignment="Left" Margin="210,38,0,0" VerticalAlignment="Top" Height="26" Width="46"/>
+        <TextBox x:Name="textBotname" HorizontalAlignment="Left" Height="23" Margin="70,14,0,0" TextWrapping="Wrap" Text="ConSoul" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="textCitnum" HorizontalAlignment="Left" Height="23" Margin="70,42,0,0" TextWrapping="Wrap" Text="318855" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="textPrivPass" HorizontalAlignment="Left" Height="23" Margin="70,70,0,0" TextWrapping="Wrap" Text="test" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="textWorld" HorizontalAlignment="Left" Height="23" Margin="261,14,0,0" TextWrapping="Wrap" Text="Simulator" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="textAvatar" HorizontalAlignment="Left" Height="23" Margin="261,42,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="47"/>
+        <TextBox x:Name="textCoords" HorizontalAlignment="Left" Height="23" Margin="261,70,0,0" TextWrapping="Wrap" Text="0n 0w 0a 0" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="butChange" Content="Change" HorizontalAlignment="Left" Margin="315,42,0,0" VerticalAlignment="Top" Width="66" Height="22" Click="butChange_Click"/>
+        <Button x:Name="butLogOut" Content="Log Out" HorizontalAlignment="Left" Margin="431,42,0,0" VerticalAlignment="Top" Width="75" Height="23" Click="butLogOut_Click"/>
+        <Button x:Name="butLogIn" Content="Log In" HorizontalAlignment="Left" Margin="431,14,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="-0.334,1.044" Height="23" Click="butLogIn_Click"/>
+        <Button x:Name="butAddTrig" Content="Add a Trigger" HorizontalAlignment="Left" Margin="549,14,0,0" VerticalAlignment="Top" Width="103" Height="23" IsEnabled="False"/>
+        <Button x:Name="butEditTrig" Content="Edit a Trigger" HorizontalAlignment="Left" Margin="549,42,0,0" VerticalAlignment="Top" Width="103" Height="22" IsEnabled="False"/>
+        <Button x:Name="butDeleteTrig" Content="Delete a Trigger" HorizontalAlignment="Left" Margin="549,98,0,0" VerticalAlignment="Top" Width="103" Height="23" IsEnabled="False"/>
+        <Button x:Name="butMoveTrig" Content="Move a Trigger" HorizontalAlignment="Left" Margin="549,70,0,0" VerticalAlignment="Top" Width="103" Height="23" IsEnabled="False"/>
+        <Button x:Name="butConfig" Content="Configure" HorizontalAlignment="Left" Margin="431,70,0,0" VerticalAlignment="Top" Width="75" Height="23" Click="butConfig_Click"/>
+        <StatusBar x:Name="toolBar" HorizontalAlignment="Left" Height="22" Margin="6,422,0,0" VerticalAlignment="Top" Width="648">
+            <StatusBarItem x:Name="toolStatus" Content="Status" Height="22" VerticalAlignment="Top"/>
+        </StatusBar>
+        <TabControl HorizontalAlignment="Left" Height="292" Margin="6,124,0,0" VerticalAlignment="Top" Width="648" >
+            <TabItem Header="TabItem">
+                <Grid Background="#FFE5E5E5"/>
+            </TabItem>
+            <TabItem Header="TabItem">
+                <Grid Background="#FFE5E5E5"/>
+            </TabItem>
+        </TabControl>
+        <Button x:Name="butMoveTo" Content="Move To" HorizontalAlignment="Left" Margin="261,98,0,0" VerticalAlignment="Top" Width="120" Height="23"/>
+
     </Grid>
 </Window>
