@@ -38,7 +38,7 @@
                 <Grid Background="#FFE5E5E5"/>
             </TabItem>
         </TabControl>
-        <Button x:Name="butMoveTo" Content="Move To" HorizontalAlignment="Left" Margin="261,98,0,0" VerticalAlignment="Top" Width="120" Height="23"/>
+        <Button x:Name="butMoveTo" Content="Move To" HorizontalAlignment="Left" Margin="261,98,0,0" VerticalAlignment="Top" Width="120" Height="23" Click="butMoveTo_Click"/>
 
     </Grid>
 </Window>

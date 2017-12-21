@@ -175,7 +175,7 @@ namespace ConSoul
         private void butChange_Click(object sender, RoutedEventArgs e)
         {
             Globals.iAV = Convert.ToInt32(textAvatar.Text);
-            Status("Command issued: Change AV to " + Globals.iAV);
+            //Status("Command issued: Change AV to " + Globals.iAV);
             _instance.Attributes.MyType = Globals.iAV;
             _instance.StateChange();
         }
@@ -334,6 +334,10 @@ namespace ConSoul
             
         }
 
+        private void butMoveTo_Click(object sender, RoutedEventArgs e)
+        {
+            // read coords
 
+        }
     }
 }
