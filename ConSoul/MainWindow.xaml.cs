@@ -15,6 +15,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Data;
+using System.IO;
 using AW;
 using System.Threading.Tasks;
 
@@ -361,7 +362,8 @@ namespace ConSoul
 
         }
 
-        private async void butLoadProp_Click(object sender, RoutedEventArgs e)
+        //private async void butLoadProp_Click(object sender, RoutedEventArgs e)
+        private void butLoadProp_Click(object sender, RoutedEventArgs e)
         {
             // Every time we come here, assume we're wiping the data table
             Globals.PropertyTable.Clear();
@@ -386,14 +388,37 @@ namespace ConSoul
             _instance.Attributes.CellIterator = 0;
             _instance.Attributes.CellCombine = true;
 
-            while (!(_instance.CellNext() == Result.Success) && (_instance.Attributes.CellIterator != -1));
+            int cc = 0;
+            while (true)
+            {
+                cc++;
+                Console.WriteLine("I have run the cell.next command " + cc.ToString() + " times now.");
+                AW.Result ret = _instance.CellNext();
+                if (!(ret == Result.Success))
+                {
+                    break;
+                }
+            }
 
-            await Task.Delay(8000);
+            //while (!(_instance.CellNext() == Result.Success) && (_instance.Attributes.CellIterator != -1));
 
-            Console.WriteLine("Finished iterating through objects");
-            Console.WriteLine("Number of data rows: " + Globals.PropertyTable.Rows.Count);
+            // await Task.Delay(8000);
+
+            //Console.WriteLine("Finished iterating through objects");
+            //Console.WriteLine("Number of data rows: " + Globals.PropertyTable.Rows.Count);
 
 
+        }
+
+        private void butPropCheck_Click(object sender, RoutedEventArgs e)
+        {
+            using (StreamWriter sw = File.CreateText("dump1.txt"))
+            {
+                foreach (DataRow row in Globals.PropertyTable.Rows)
+                {
+                    sw.WriteLine(row["model"].ToString());
+                }
+            }
         }
     }
 }

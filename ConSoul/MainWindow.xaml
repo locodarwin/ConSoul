@@ -40,6 +40,7 @@
         </TabControl>
         <Button x:Name="butMoveTo" Content="Move To" HorizontalAlignment="Left" Margin="261,98,0,0" VerticalAlignment="Top" Width="120" Height="23" Click="butMoveTo_Click"/>
         <Button x:Name="butLoadProp" Content="Load Prop" HorizontalAlignment="Left" Margin="431,98,0,0" VerticalAlignment="Top" Width="75" Height="23" Click="butLoadProp_Click"/>
+        <Button x:Name="butPropCheck" Content="Chk" HorizontalAlignment="Left" Margin="514,100,0,0" VerticalAlignment="Top" Width="25" Click="butPropCheck_Click"/>
 
     </Grid>
 </Window>
