@@ -31,14 +31,15 @@
             <StatusBarItem x:Name="toolStatus" Content="Status" Height="22" VerticalAlignment="Top"/>
         </StatusBar>
         <TabControl HorizontalAlignment="Left" Height="292" Margin="6,124,0,0" VerticalAlignment="Top" Width="648" >
-            <TabItem Header="TabItem">
-                <Grid Background="#FFE5E5E5"/>
+            <TabItem x:Name="tabOne" Header="TabItem">
+                <Grid x:Name="theGrid" Background="#FFE5E5E5"/>
             </TabItem>
             <TabItem Header="TabItem">
                 <Grid Background="#FFE5E5E5"/>
             </TabItem>
         </TabControl>
         <Button x:Name="butMoveTo" Content="Move To" HorizontalAlignment="Left" Margin="261,98,0,0" VerticalAlignment="Top" Width="120" Height="23" Click="butMoveTo_Click"/>
+        <Button x:Name="butLoadProp" Content="Load Prop" HorizontalAlignment="Left" Margin="431,98,0,0" VerticalAlignment="Top" Width="75" Height="23" Click="butLoadProp_Click"/>
 
     </Grid>
 </Window>

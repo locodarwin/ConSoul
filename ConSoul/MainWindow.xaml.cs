@@ -14,9 +14,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Data;
 using AW;
-
-
+using System.Threading.Tasks;
 
 namespace ConSoul
 {
@@ -64,7 +64,7 @@ namespace ConSoul
             // The AW message queue timer
             aTimer = new DispatcherTimer();
             aTimer.Tick += new EventHandler(aTimer_Tick);
-            aTimer.Interval = new TimeSpan(20);
+            aTimer.Interval = new TimeSpan(100);
             aTimer.Start();
 
             // Background tasking definitions for the universe & world login
@@ -73,6 +73,19 @@ namespace ConSoul
             m_Login.ProgressChanged += new ProgressChangedEventHandler(m_LoginProgress);
             m_Login.RunWorkerCompleted += new RunWorkerCompletedEventHandler(m_LoginCompleted);
             m_Login.WorkerReportsProgress = true;
+
+            // Programmatically add a button
+            Button butTest = new Button();
+            butTest.Content = "Test Button";
+            butTest.VerticalAlignment = VerticalAlignment.Top;
+            butTest.HorizontalAlignment = HorizontalAlignment.Left;
+            butTest.Margin = new Thickness(5, 5, 0, 0);
+            butTest.Width = 86;
+            butTest.Height = 23;
+            
+            theGrid.Children.Add(butTest);
+            butTest.Click += butTest_Click;
+
 
 
 
@@ -109,9 +122,15 @@ namespace ConSoul
             // Command prefix
             public static string sComPrefix;
 
+            // Specific to ConSoul
+            public static DataTable PropertyTable = new DataTable();
+
         }
 
-
+        private void butTest_Click(object sender, RoutedEventArgs e)
+        {
+            Console.WriteLine("You clicked the button");
+        }
 
         private void butLogIn_Click(object sender, RoutedEventArgs e)
         {
@@ -200,6 +219,8 @@ namespace ConSoul
             //_instance.EventAvatarAdd += OnEventAvatarAdd;
             //_instance.EventAvatarDelete += OnEventAvatarDelete;
             _instance.EventChat += OnEventChat;
+            _instance.CallbackCellResult += null;
+            _instance.EventCellObject += OnEventCellObject;
 
 
             // Set universe login parameters
@@ -337,6 +358,41 @@ namespace ConSoul
         private void butMoveTo_Click(object sender, RoutedEventArgs e)
         {
             // read coords
+
+        }
+
+        private async void butLoadProp_Click(object sender, RoutedEventArgs e)
+        {
+            // Every time we come here, assume we're wiping the data table
+            Globals.PropertyTable.Clear();
+            Globals.PropertyTable.Columns.Clear();
+
+            // Add the columns to the internal datatable
+            Globals.PropertyTable.Columns.Add("ObjectID", typeof(int));
+            Globals.PropertyTable.Columns.Add("ObjectType", typeof(int));
+            Globals.PropertyTable.Columns.Add("ObjectOwner", typeof(int));
+            Globals.PropertyTable.Columns.Add("ObjectTimeStamp", typeof(int));
+            Globals.PropertyTable.Columns.Add("X", typeof(int));
+            Globals.PropertyTable.Columns.Add("Y", typeof(int));
+            Globals.PropertyTable.Columns.Add("Z", typeof(int));
+            Globals.PropertyTable.Columns.Add("Yaw", typeof(int));
+            Globals.PropertyTable.Columns.Add("Tilt", typeof(int));
+            Globals.PropertyTable.Columns.Add("Roll", typeof(int));
+            Globals.PropertyTable.Columns.Add("Model", typeof(string));
+            Globals.PropertyTable.Columns.Add("Desc", typeof(string));
+            Globals.PropertyTable.Columns.Add("Action", typeof(string));
+            Globals.PropertyTable.Columns.Add("Data", typeof(byte[]));
+
+            _instance.Attributes.CellIterator = 0;
+            _instance.Attributes.CellCombine = true;
+
+            while (!(_instance.CellNext() == Result.Success) && (_instance.Attributes.CellIterator != -1));
+
+            await Task.Delay(8000);
+
+            Console.WriteLine("Finished iterating through objects");
+            Console.WriteLine("Number of data rows: " + Globals.PropertyTable.Rows.Count);
+
 
         }
     }
