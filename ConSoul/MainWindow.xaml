@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ConSoul"
         mc:Ignorable="d"
-        Title="ConSoul" Height="480.783" Width="668.137" ResizeMode="NoResize">
+        Title="ConSoul" Height="645.783" Width="668.137" ResizeMode="NoResize">
     <Grid Margin="0,0,0,0">
         <Label Content="Botname:" HorizontalAlignment="Left" Margin="5,10,0,0" VerticalAlignment="Top" Height="26" Width="60"/>
         <Label Content="Citnum:" HorizontalAlignment="Left" Margin="10,38,0,0" VerticalAlignment="Top" Height="26" Width="51"/>
@@ -27,12 +27,47 @@
         <Button x:Name="butDeleteTrig" Content="Delete a Trigger" HorizontalAlignment="Left" Margin="549,98,0,0" VerticalAlignment="Top" Width="103" Height="23" IsEnabled="False"/>
         <Button x:Name="butMoveTrig" Content="Move a Trigger" HorizontalAlignment="Left" Margin="549,70,0,0" VerticalAlignment="Top" Width="103" Height="23" IsEnabled="False"/>
         <Button x:Name="butConfig" Content="Configure" HorizontalAlignment="Left" Margin="431,70,0,0" VerticalAlignment="Top" Width="75" Height="23" Click="butConfig_Click"/>
-        <StatusBar x:Name="toolBar" HorizontalAlignment="Left" Height="22" Margin="6,422,0,0" VerticalAlignment="Top" Width="648">
+        <StatusBar x:Name="toolBar" HorizontalAlignment="Left" Height="22" Margin="7,589,0,0" VerticalAlignment="Top" Width="648">
             <StatusBarItem x:Name="toolStatus" Content="Status" Height="22" VerticalAlignment="Top"/>
         </StatusBar>
-        <TabControl HorizontalAlignment="Left" Height="292" Margin="6,124,0,0" VerticalAlignment="Top" Width="648" >
+        <TabControl HorizontalAlignment="Left" Height="460" Margin="6,124,0,0" VerticalAlignment="Top" Width="648" >
             <TabItem x:Name="tabOne" Header="TabItem">
-                <Grid x:Name="theGrid" Background="#FFE5E5E5"/>
+                <Grid x:Name="theGrid" Background="#FFE5E5E5" Height="432" VerticalAlignment="Top">
+                    <Button x:Name="_78796" Content="2018b" HorizontalAlignment="Left" Margin="10,34,0,0" VerticalAlignment="Top" Width="91" RenderTransformOrigin="-0.213,0.25" Click="ConButtons_Click"/>
+                    <Button x:Name="_78793" Content="Rush Leaf" HorizontalAlignment="Left" Margin="10,59,0,0" VerticalAlignment="Top" Width="91" Click="ConButtons_Click"/>
+                    <Button x:Name="_78801" Content="Rush Leaf" HorizontalAlignment="Left" Margin="10,84,0,0" VerticalAlignment="Top" Width="91" Click="ConButtons_Click"/>
+                    <Button x:Name="_78794" Content="Dab" HorizontalAlignment="Left" Margin="10,109,0,0" VerticalAlignment="Top" Width="91" Click="ConButtons_Click"/>
+                    <Button x:Name="_78802" Content="Dab" HorizontalAlignment="Left" Margin="10,134,0,0" VerticalAlignment="Top" Width="91" Click="ConButtons_Click"/>
+                    <Button x:Name="_78803" Content="Dance" HorizontalAlignment="Left" Margin="10,159,0,0" VerticalAlignment="Top" Width="91" Click="ConButtons_Click"/>
+                    <Button x:Name="_78789" Content="Dead" HorizontalAlignment="Left" Margin="10,184,0,0" VerticalAlignment="Top" Width="91" Click="ConButtons_Click"/>
+                    <Button x:Name="_78797" Content="Dead" HorizontalAlignment="Left" Margin="10,209,0,0" VerticalAlignment="Top" Width="91" Click="ConButtons_Click"/>
+                    <Button x:Name="_78804" Content="Heavy Metal" HorizontalAlignment="Left" Margin="10,234,0,0" VerticalAlignment="Top" Width="91" Click="ConButtons_Click"/>
+                    <Button x:Name="_78792" Content="Hump Day" HorizontalAlignment="Left" Margin="10,259,0,0" VerticalAlignment="Top" Width="91" Click="ConButtons_Click"/>
+                    <Label Content="Wallpapers" HorizontalAlignment="Left" Margin="7,0,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" Height="34"/>
+                    <Button x:Name="_78800" Content="Hump Day" HorizontalAlignment="Left" Margin="10,284,0,0" VerticalAlignment="Top" Width="91" Click="ConButtons_Click"/>
+                    <Button x:Name="_78791" Content="Loco Radio" HorizontalAlignment="Left" Margin="10,309,0,0" VerticalAlignment="Top" Width="91" Click="ConButtons_Click"/>
+                    <Button x:Name="_78799" Content="Loco Radio" HorizontalAlignment="Left" Margin="10,334,0,0" VerticalAlignment="Top" Width="91"/>
+                    <Button x:Name="_78795" Content="Raise Glass" HorizontalAlignment="Left" Margin="10,359,0,0" VerticalAlignment="Top" Width="91"/>
+                    <Button x:Name="_78798" Content="RJB Radio" HorizontalAlignment="Left" Margin="10,384,0,0" VerticalAlignment="Top" Width="91"/>
+                    <Button x:Name="_78790" Content="RJB Radio" HorizontalAlignment="Left" Margin="10,409,0,0" VerticalAlignment="Top" Width="91"/>
+                    <Button x:Name="_78622" Content="Kaleid 1" HorizontalAlignment="Left" Margin="123,34,0,0" VerticalAlignment="Top" Width="91" RenderTransformOrigin="-0.213,0.25" Click="ConButtons_Click"/>
+                    <Button x:Name="_78623" Content="Kaleid 2" HorizontalAlignment="Left" Margin="123,59,0,0" VerticalAlignment="Top" Width="91" Click="ConButtons_Click"/>
+                    <Button x:Name="_78624" Content="Kaleid 3" HorizontalAlignment="Left" Margin="123,84,0,0" VerticalAlignment="Top" Width="91" Click="ConButtons_Click"/>
+                    <Button Content="Dab" HorizontalAlignment="Left" Margin="123,109,0,0" VerticalAlignment="Top" Width="91"/>
+                    <Button Content="Dab" HorizontalAlignment="Left" Margin="123,134,0,0" VerticalAlignment="Top" Width="91"/>
+                    <Button Content="Dance" HorizontalAlignment="Left" Margin="123,159,0,0" VerticalAlignment="Top" Width="91"/>
+                    <Button Content="Dead" HorizontalAlignment="Left" Margin="123,184,0,0" VerticalAlignment="Top" Width="91"/>
+                    <Button Content="Dead" HorizontalAlignment="Left" Margin="123,209,0,0" VerticalAlignment="Top" Width="91"/>
+                    <Button Content="Heavy Metal" HorizontalAlignment="Left" Margin="123,234,0,0" VerticalAlignment="Top" Width="91"/>
+                    <Button Content="Hump Day" HorizontalAlignment="Left" Margin="123,259,0,0" VerticalAlignment="Top" Width="91"/>
+                    <Button Content="Hump Day" HorizontalAlignment="Left" Margin="123,284,0,0" VerticalAlignment="Top" Width="91"/>
+                    <Button Content="Loco Radio" HorizontalAlignment="Left" Margin="123,309,0,0" VerticalAlignment="Top" Width="91"/>
+                    <Button Content="Loco Radio" HorizontalAlignment="Left" Margin="123,334,0,0" VerticalAlignment="Top" Width="91"/>
+                    <Button Content="Raise Glass" HorizontalAlignment="Left" Margin="123,359,0,0" VerticalAlignment="Top" Width="91"/>
+                    <Button Content="RJB Radio" HorizontalAlignment="Left" Margin="123,384,0,0" VerticalAlignment="Top" Width="91"/>
+                    <Button Content="RJB Radio" HorizontalAlignment="Left" Margin="123,409,0,0" VerticalAlignment="Top" Width="91"/>
+                    <Label Content="Floors" HorizontalAlignment="Left" Margin="138,0,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" Height="34"/>
+                </Grid>
             </TabItem>
             <TabItem Header="TabItem">
                 <Grid Background="#FFE5E5E5"/>

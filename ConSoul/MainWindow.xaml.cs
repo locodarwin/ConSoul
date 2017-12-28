@@ -130,7 +130,14 @@ namespace ConSoul
 
         private void butTest_Click(object sender, RoutedEventArgs e)
         {
-            Console.WriteLine("You clicked the button");
+            _instance.Attributes.ObjectNumber = 0;
+            _instance.Attributes.ObjectId = 78096;
+            _instance.Attributes.ObjectSync = 1;
+
+            _instance.ObjectClick();
+
+
+            
         }
 
         private void butLogIn_Click(object sender, RoutedEventArgs e)
@@ -363,7 +370,7 @@ namespace ConSoul
         }
 
         //private async void butLoadProp_Click(object sender, RoutedEventArgs e)
-        private void butLoadProp_Click(object sender, RoutedEventArgs e)
+        private async void butLoadProp_Click(object sender, RoutedEventArgs e)
         {
             // Every time we come here, assume we're wiping the data table
             Globals.PropertyTable.Clear();
@@ -385,27 +392,34 @@ namespace ConSoul
             Globals.PropertyTable.Columns.Add("Action", typeof(string));
             Globals.PropertyTable.Columns.Add("Data", typeof(byte[]));
 
+            // Diable the button until we're done
+            butLoadProp.IsEnabled = false;
+
             _instance.Attributes.CellIterator = 0;
             _instance.Attributes.CellCombine = true;
 
             int cc = 0;
             while (true)
             {
-                cc++;
-                Console.WriteLine("I have run the cell.next command " + cc.ToString() + " times now.");
-                AW.Result ret = _instance.CellNext();
-                if (!(ret == Result.Success))
+
+                int gg = _instance.Attributes.CellIterator;
+                if (gg == -1)
                 {
                     break;
                 }
+
+                cc++;
+                Console.WriteLine("Starting cell_next iteration " + cc.ToString() + " and celliterator = " + gg.ToString());
+                await Task.Delay(200);
+                AW.Result ret = _instance.CellNext();
+                
+
+                
             }
 
-            //while (!(_instance.CellNext() == Result.Success) && (_instance.Attributes.CellIterator != -1));
+            Console.WriteLine("Done with query! We queried " + cc.ToString() + " times on this run.");
 
-            // await Task.Delay(8000);
-
-            //Console.WriteLine("Finished iterating through objects");
-            //Console.WriteLine("Number of data rows: " + Globals.PropertyTable.Rows.Count);
+            butLoadProp.IsEnabled = true;
 
 
         }
@@ -416,9 +430,35 @@ namespace ConSoul
             {
                 foreach (DataRow row in Globals.PropertyTable.Rows)
                 {
-                    sw.WriteLine(row["model"].ToString());
+                    string model = row["Model"].ToString();
+                    string objid = row["ObjectID"].ToString();
+                    string x = row["X"].ToString();
+                    string z = row["Y"].ToString();
+                    string desc = row["Desc"].ToString();
+                    string action = row["Action"].ToString();
+                    sw.WriteLine(model + "\tObjID: " + objid + "\tCoords: " + z + "," + x + "\tDesc: " + desc + "\tAction: " + action);
+
+                    //sw.WriteLine(row["model"].ToString());
                 }
             }
         }
+
+        private void ConButtons_Click(object sender, RoutedEventArgs e)
+        {
+            Button b = (Button)sender;
+            string who = b.Name.ToString();
+            //Console.WriteLine("Button " + who + " sent me here.");
+            who = who.Replace("_", "");
+
+            int objid = Convert.ToInt32(who);
+
+            _instance.Attributes.ObjectNumber = 0;
+            _instance.Attributes.ObjectId = objid;
+            _instance.Attributes.ObjectSync = 1;
+
+            _instance.ObjectClick();
+
+        }
+
     }
 }

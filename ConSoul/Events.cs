@@ -47,8 +47,16 @@ namespace ConSoul
             //Console.WriteLine(sender.Attributes.ObjectModel);
             // Add the columns to the internal datatable
 
+            // reading the description and weeding out the objects that don't match
+            // remove this bit to collect all objects that trip the event (but make sure to grab Desc with the other grabs below it)
+            string desc = sender.Attributes.ObjectDescription;
+            if (desc.Contains("^ef") == false)
+            {
+                return;
+            }
+
             int ObjID, ObjType, ObjOwner, ObjTS, x, y, z, yaw, tilt, roll;
-            string model, desc, act;
+            string model, act;
             byte[] data;
 
             ObjID = sender.Attributes.ObjectId;
@@ -62,12 +70,12 @@ namespace ConSoul
             tilt = sender.Attributes.ObjectTilt;
             roll = sender.Attributes.ObjectRoll;
             model = sender.Attributes.ObjectModel;
-            desc = sender.Attributes.ObjectDescription;
+            
             act = sender.Attributes.ObjectAction;
             data = sender.Attributes.ObjectData;
 
 
-
+            
             Globals.PropertyTable.Rows.Add(new Object[] {ObjID, ObjType, ObjOwner, ObjTS, x, y, z, yaw, tilt, roll, model, desc, act, data});
 
 
