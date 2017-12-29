@@ -78,11 +78,19 @@ namespace ConSoul
             
             Globals.PropertyTable.Rows.Add(new Object[] {ObjID, ObjType, ObjOwner, ObjTS, x, y, z, yaw, tilt, roll, model, desc, act, data});
 
-
-
-
         }
 
+
+        public void OnEventObjectClick(IInstance sender)
+        {
+
+            if (Globals.GetIDMode == true)
+            {
+                int objid = sender.Attributes.ObjectId;
+                _instance.Say("Clicked object ID: " + objid.ToString());
+            }
+            
+        }
 
 
 

@@ -76,6 +76,7 @@ namespace ConSoul
             m_Login.WorkerReportsProgress = true;
 
             // Programmatically add a button
+            /*
             Button butTest = new Button();
             butTest.Content = "Test Button";
             butTest.VerticalAlignment = VerticalAlignment.Top;
@@ -86,7 +87,7 @@ namespace ConSoul
             
             theGrid.Children.Add(butTest);
             butTest.Click += butTest_Click;
-
+            */
 
 
 
@@ -99,7 +100,7 @@ namespace ConSoul
             // Application parameters
             public static string sAppName = "ConSoul";
             public static string sVersion = "v1.0";
-            public static string sByline = "Copyright © 2017 by Locodarwin";
+            public static string sByline = "(2017 by Locodarwin)";
             public static string sINI = "ConSoul.ini";
 
             // Login and positioning
@@ -125,6 +126,7 @@ namespace ConSoul
 
             // Specific to ConSoul
             public static DataTable PropertyTable = new DataTable();
+            public static bool GetIDMode = false;
 
         }
 
@@ -229,6 +231,7 @@ namespace ConSoul
             _instance.EventChat += OnEventChat;
             _instance.CallbackCellResult += null;
             _instance.EventCellObject += OnEventCellObject;
+            _instance.EventObjectClick += OnEventObjectClick;
 
 
             // Set universe login parameters
@@ -458,6 +461,20 @@ namespace ConSoul
 
             _instance.ObjectClick();
 
+        }
+
+        private void butPropCheck_Copy_Click(object sender, RoutedEventArgs e)
+        {
+            if (Globals.GetIDMode == false)
+            {
+                Globals.GetIDMode = true;
+                butGetID.Background = Brushes.Salmon;
+            }
+            else
+            {
+                Globals.GetIDMode = false;
+                butGetID.ClearValue(Button.BackgroundProperty);
+            }
         }
 
     }
