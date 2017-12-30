@@ -456,12 +456,6 @@ namespace ConSoul
 
         private void ConButtons_Click(object sender, RoutedEventArgs e)
         {
-
-            if (Globals.iInWorld == false)
-            {
-                return;
-            }
-
             Button b = (Button)sender;
             string who = b.Name.ToString();
             //Console.WriteLine("Button " + who + " sent me here.");
@@ -489,6 +483,7 @@ namespace ConSoul
                 Globals.GetIDMode = false;
                 butGetID.ClearValue(Button.BackgroundProperty);
             }
+
         }
 
     }
