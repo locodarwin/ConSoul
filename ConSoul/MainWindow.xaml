@@ -5,8 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ConSoul"
         mc:Ignorable="d"
-        Title="ConSoul" Height="645.783" Width="668.137" ResizeMode="NoResize">
+        Title="ConSoul" Height="645.783" Width="668.137" ResizeMode="NoResize" Icon="locobot.ico">
     <Grid Margin="0,0,0,0">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="218*"/>
+            <ColumnDefinition Width="113*"/>
+        </Grid.ColumnDefinitions>
         <Label Content="Botname:" HorizontalAlignment="Left" Margin="5,10,0,0" VerticalAlignment="Top" Height="26" Width="60"/>
         <Label Content="Citnum:" HorizontalAlignment="Left" Margin="10,38,0,0" VerticalAlignment="Top" Height="26" Width="51"/>
         <Label Content="PrivPass:" HorizontalAlignment="Left" Margin="10,66,0,0" VerticalAlignment="Top" Height="26" Width="55"/>
@@ -20,92 +24,119 @@
         <TextBox x:Name="textAvatar" HorizontalAlignment="Left" Height="23" Margin="261,42,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="47"/>
         <TextBox x:Name="textCoords" HorizontalAlignment="Left" Height="23" Margin="261,70,0,0" TextWrapping="Wrap" Text="0n 0w 0a 0" VerticalAlignment="Top" Width="120"/>
         <Button x:Name="butChange" Content="Change" HorizontalAlignment="Left" Margin="315,42,0,0" VerticalAlignment="Top" Width="66" Height="22" Click="butChange_Click"/>
-        <Button x:Name="butLogOut" Content="Log Out" HorizontalAlignment="Left" Margin="401,42,0,0" VerticalAlignment="Top" Width="75" Height="23" Click="butLogOut_Click"/>
-        <Button x:Name="butLogIn" Content="Log In" HorizontalAlignment="Left" Margin="401,14,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="-0.334,1.044" Height="23" Click="butLogIn_Click"/>
-        <Button x:Name="butAddTrig" Content="Add a Trigger" HorizontalAlignment="Left" Margin="549,14,0,0" VerticalAlignment="Top" Width="103" Height="23" IsEnabled="False"/>
-        <Button x:Name="butEditTrig" Content="Edit a Trigger" HorizontalAlignment="Left" Margin="549,42,0,0" VerticalAlignment="Top" Width="103" Height="22" IsEnabled="False"/>
-        <Button x:Name="butDeleteTrig" Content="Delete a Trigger" HorizontalAlignment="Left" Margin="549,98,0,0" VerticalAlignment="Top" Width="103" Height="23" IsEnabled="False"/>
-        <Button x:Name="butMoveTrig" Content="Move a Trigger" HorizontalAlignment="Left" Margin="549,70,0,0" VerticalAlignment="Top" Width="103" Height="23" IsEnabled="False"/>
-        <Button x:Name="butConfig" Content="Configure" HorizontalAlignment="Left" Margin="401,70,0,0" VerticalAlignment="Top" Width="75" Height="23" Click="butConfig_Click"/>
-        <StatusBar x:Name="toolBar" HorizontalAlignment="Left" Height="22" Margin="7,589,0,0" VerticalAlignment="Top" Width="648">
+        <Button x:Name="butLogOut" Content="Log Out" HorizontalAlignment="Left" Margin="401,42,0,0" VerticalAlignment="Top" Width="75" Height="23" Click="butLogOut_Click" Grid.ColumnSpan="2"/>
+        <Button x:Name="butLogIn" Content="Log In" HorizontalAlignment="Left" Margin="401,14,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="-0.334,1.044" Height="23" Click="butLogIn_Click" Grid.ColumnSpan="2"/>
+        <Button x:Name="butAddTrig" Content="Add a Trigger" HorizontalAlignment="Left" Margin="113,14,0,0" VerticalAlignment="Top" Width="103" Height="23" IsEnabled="False" Grid.Column="1"/>
+        <Button x:Name="butEditTrig" Content="Edit a Trigger" HorizontalAlignment="Left" Margin="113,42,0,0" VerticalAlignment="Top" Width="103" Height="22" IsEnabled="False" Grid.Column="1"/>
+        <Button x:Name="butDeleteTrig" Content="Delete a Trigger" HorizontalAlignment="Left" Margin="113,98,0,0" VerticalAlignment="Top" Width="103" Height="23" IsEnabled="False" Grid.Column="1"/>
+        <Button x:Name="butMoveTrig" Content="Move a Trigger" HorizontalAlignment="Left" Margin="113,70,0,0" VerticalAlignment="Top" Width="103" Height="23" IsEnabled="False" Grid.Column="1"/>
+        <Button x:Name="butConfig" Content="Configure" HorizontalAlignment="Left" Margin="401,70,0,0" VerticalAlignment="Top" Width="75" Height="23" Click="butConfig_Click" Grid.ColumnSpan="2"/>
+        <StatusBar x:Name="toolBar" HorizontalAlignment="Left" Height="22" Margin="7,589,0,0" VerticalAlignment="Top" Width="648" Grid.ColumnSpan="2">
             <StatusBarItem x:Name="toolStatus" Content="Status" Height="22" VerticalAlignment="Top"/>
         </StatusBar>
-        <TabControl HorizontalAlignment="Left" Height="460" Margin="6,124,0,0" VerticalAlignment="Top" Width="648" >
-            <TabItem x:Name="tabOne" Header="TabItem">
+        <TabControl HorizontalAlignment="Left" Height="460" Margin="6,124,0,0" VerticalAlignment="Top" Width="648" Grid.ColumnSpan="2" >
+            <TabItem x:Name="tabOne" Header="Nuttshell 12-30-17">
                 <Grid x:Name="theGrid" Background="#FFE5E5E5" Height="432" VerticalAlignment="Top">
-                    <Button x:Name="_78796" Content="2018b" HorizontalAlignment="Left" Margin="10,34,0,0" VerticalAlignment="Top" Width="91" RenderTransformOrigin="-0.213,0.25" Click="ConButtons_Click"/>
-                    <Button x:Name="_78793" Content="Rush Leaf" HorizontalAlignment="Left" Margin="10,59,0,0" VerticalAlignment="Top" Width="91" Click="ConButtons_Click"/>
-                    <Button x:Name="_78801" Content="Rush Leaf" HorizontalAlignment="Left" Margin="10,84,0,0" VerticalAlignment="Top" Width="91" Click="ConButtons_Click"/>
-                    <Button x:Name="_78794" Content="Dab" HorizontalAlignment="Left" Margin="10,109,0,0" VerticalAlignment="Top" Width="91" Click="ConButtons_Click"/>
-                    <Button x:Name="_78802" Content="Dab" HorizontalAlignment="Left" Margin="10,134,0,0" VerticalAlignment="Top" Width="91" Click="ConButtons_Click"/>
-                    <Button x:Name="_78803" Content="Dance" HorizontalAlignment="Left" Margin="10,159,0,0" VerticalAlignment="Top" Width="91" Click="ConButtons_Click"/>
-                    <Button x:Name="_78789" Content="Dead" HorizontalAlignment="Left" Margin="10,184,0,0" VerticalAlignment="Top" Width="91" Click="ConButtons_Click"/>
-                    <Button x:Name="_78797" Content="Dead" HorizontalAlignment="Left" Margin="10,209,0,0" VerticalAlignment="Top" Width="91" Click="ConButtons_Click"/>
-                    <Button x:Name="_78804" Content="Heavy Metal" HorizontalAlignment="Left" Margin="10,234,0,0" VerticalAlignment="Top" Width="91" Click="ConButtons_Click"/>
-                    <Button x:Name="_78792" Content="Hump Day" HorizontalAlignment="Left" Margin="10,259,0,0" VerticalAlignment="Top" Width="91" Click="ConButtons_Click"/>
+                    <Button x:Name="_78796" Content="2018b" HorizontalAlignment="Left" Margin="10,34,0,0" VerticalAlignment="Top" Width="91" RenderTransformOrigin="-0.213,0.25" Click="ConButtons_Click" Background="#FF77C6E4"/>
+                    <Button x:Name="_78793" Content="Rush Leaf" HorizontalAlignment="Left" Margin="10,59,0,0" VerticalAlignment="Top" Width="91" Click="ConButtons_Click" Background="#FF77C6E4"/>
+                    <Button x:Name="_78801" Content="Star City Dance" HorizontalAlignment="Left" Margin="10,84,0,0" VerticalAlignment="Top" Width="91" Click="ConButtons_Click" Background="#FF77C6E4"/>
+                    <Button x:Name="_78794" Content="Dab" HorizontalAlignment="Left" Margin="10,109,0,0" VerticalAlignment="Top" Width="91" Click="ConButtons_Click" Background="#FF77C6E4"/>
+                    <Button x:Name="_78802" Content="FUBAR'd Friday" HorizontalAlignment="Left" Margin="10,134,0,0" VerticalAlignment="Top" Width="91" Click="ConButtons_Click" Background="#FF77C6E4"/>
+                    <Button x:Name="_78803" Content="Brown Clef" HorizontalAlignment="Left" Margin="10,159,0,0" VerticalAlignment="Top" Width="91" Click="ConButtons_Click" Background="#FF77C6E4"/>
+                    <Button x:Name="_78789" Content="Skeleton" HorizontalAlignment="Left" Margin="10,184,0,0" VerticalAlignment="Top" Width="91" Click="ConButtons_Click" Background="#FF77C6E4"/>
+                    <Button x:Name="_78797" Content="Nuttshell" HorizontalAlignment="Left" Margin="10,209,0,0" VerticalAlignment="Top" Width="91" Click="ConButtons_Click" Background="#FF77C6E4"/>
+                    <Button x:Name="_78804" Content="Heavy Metal" HorizontalAlignment="Left" Margin="10,234,0,0" VerticalAlignment="Top" Width="91" Click="ConButtons_Click" Background="#FF77C6E4"/>
+                    <Button x:Name="_78792" Content="Hump Day" HorizontalAlignment="Left" Margin="10,259,0,0" VerticalAlignment="Top" Width="91" Click="ConButtons_Click" Background="#FF77C6E4"/>
                     <Label Content="Wallpapers" HorizontalAlignment="Left" Margin="7,0,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" Height="34"/>
-                    <Button x:Name="_78800" Content="Hump Day" HorizontalAlignment="Left" Margin="10,284,0,0" VerticalAlignment="Top" Width="91" Click="ConButtons_Click"/>
-                    <Button x:Name="_78791" Content="Loco Radio" HorizontalAlignment="Left" Margin="10,309,0,0" VerticalAlignment="Top" Width="91" Click="ConButtons_Click"/>
-                    <Button x:Name="_78799" Content="Loco Radio" HorizontalAlignment="Left" Margin="10,334,0,0" VerticalAlignment="Top" Width="91" Click="ConButtons_Click"/>
-                    <Button x:Name="_78795" Content="Raise Glass" HorizontalAlignment="Left" Margin="10,359,0,0" VerticalAlignment="Top" Width="91" Click="ConButtons_Click"/>
-                    <Button x:Name="_78798" Content="RJB Radio" HorizontalAlignment="Left" Margin="10,384,0,0" VerticalAlignment="Top" Width="91" Click="ConButtons_Click"/>
-                    <Button x:Name="_78790" Content="RJB Radio" HorizontalAlignment="Left" Margin="10,409,0,0" VerticalAlignment="Top" Width="91" Click="ConButtons_Click"/>
-                    <Button x:Name="_78622" Content="Kaleid 1" HorizontalAlignment="Left" Margin="123,34,0,0" VerticalAlignment="Top" Width="91" RenderTransformOrigin="-0.213,0.25" Click="ConButtons_Click"/>
-                    <Button x:Name="_78623" Content="Kaleid 2" HorizontalAlignment="Left" Margin="123,59,0,0" VerticalAlignment="Top" Width="91" Click="ConButtons_Click"/>
-                    <Button x:Name="_78624" Content="Kaleid 3" HorizontalAlignment="Left" Margin="123,84,0,0" VerticalAlignment="Top" Width="91" Click="ConButtons_Click"/>
-                    <Button Content="~" HorizontalAlignment="Left" Margin="123,109,0,0" VerticalAlignment="Top" Width="91"/>
-                    <Button Content="~" HorizontalAlignment="Left" Margin="123,134,0,0" VerticalAlignment="Top" Width="91"/>
-                    <Button Content="~" HorizontalAlignment="Left" Margin="123,159,0,0" VerticalAlignment="Top" Width="91"/>
-                    <Button Content="~" HorizontalAlignment="Left" Margin="123,184,0,0" VerticalAlignment="Top" Width="91"/>
-                    <Button x:Name="_78037" Content="Blue" HorizontalAlignment="Left" Margin="123,259,0,0" VerticalAlignment="Top" Width="60" Click="ConButtons_Click"/>
-                    <Button x:Name="_78036" Content="Cyan" HorizontalAlignment="Left" Margin="123,284,0,0" VerticalAlignment="Top" Width="60" Click="ConButtons_Click"/>
-                    <Button x:Name="_78033" Content="Green" HorizontalAlignment="Left" Margin="123,309,0,0" VerticalAlignment="Top" Width="60" Click="ConButtons_Click"/>
-                    <Button x:Name="_78032" Content="Yellow" HorizontalAlignment="Left" Margin="123,334,0,0" VerticalAlignment="Top" Width="60" Click="ConButtons_Click"/>
-                    <Button x:Name="_78029" Content="Orange" HorizontalAlignment="Left" Margin="123,359,0,0" VerticalAlignment="Top" Width="60" Click="ConButtons_Click"/>
-                    <Button x:Name="_78028" Content="White" HorizontalAlignment="Left" Margin="123,384,0,0" VerticalAlignment="Top" Width="60" Click="ConButtons_Click"/>
-                    <Button x:Name="_78025" Content="Red" HorizontalAlignment="Left" Margin="123,409,0,0" VerticalAlignment="Top" Width="60" Click="ConButtons_Click"/>
-                    <Label Content="Floors 1" HorizontalAlignment="Left" Margin="133,0,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" Height="34"/>
-                    <Button x:Name="_78109" Content="Off" HorizontalAlignment="Left" Margin="217,34,0,0" VerticalAlignment="Top" Width="36" Background="#FFFF5858" Click="ConButtons_Click"/>
-                    <Button x:Name="_78112" Content="Off" HorizontalAlignment="Left" Margin="217,59,0,0" VerticalAlignment="Top" Width="36" Click="ConButtons_Click" Background="#FFFF5858"/>
-                    <Button x:Name="_78113" Content="Off" HorizontalAlignment="Left" Margin="217,84,0,0" VerticalAlignment="Top" Width="36" Click="ConButtons_Click" Background="#FFFF5858"/>
-                    <Label Content="HL" HorizontalAlignment="Left" Margin="156,225,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" Height="34"/>
-                    <Button x:Name="_78146" Content="Blue" HorizontalAlignment="Left" Margin="223,259,0,0" VerticalAlignment="Top" Width="60" Click="ConButtons_Click"/>
-                    <Button x:Name="_78147" Content="Cyan" HorizontalAlignment="Left" Margin="223,284,0,0" VerticalAlignment="Top" Width="60" Click="ConButtons_Click"/>
-                    <Button x:Name="_78148" Content="Green" HorizontalAlignment="Left" Margin="223,309,0,0" VerticalAlignment="Top" Width="60" Click="ConButtons_Click"/>
-                    <Button x:Name="_78149" Content="Yellow" HorizontalAlignment="Left" Margin="223,334,0,0" VerticalAlignment="Top" Width="60" Click="ConButtons_Click"/>
-                    <Button x:Name="_78150" Content="Orange" HorizontalAlignment="Left" Margin="223,359,0,0" VerticalAlignment="Top" Width="60" Click="ConButtons_Click"/>
-                    <Button x:Name="_78151" Content="White" HorizontalAlignment="Left" Margin="223,384,0,0" VerticalAlignment="Top" Width="60" Click="ConButtons_Click"/>
-                    <Button x:Name="_78152" Content="Red" HorizontalAlignment="Left" Margin="223,409,0,0" VerticalAlignment="Top" Width="60" Click="ConButtons_Click"/>
-                    <Label Content="BL" HorizontalAlignment="Left" Margin="221,225,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" Height="34"/>
+                    <Button x:Name="_78800" Content="FUBAR'D II" HorizontalAlignment="Left" Margin="10,284,0,0" VerticalAlignment="Top" Width="91" Click="ConButtons_Click" Background="#FF77C6E4"/>
+                    <Button x:Name="_78791" Content="Loco Radio" HorizontalAlignment="Left" Margin="10,309,0,0" VerticalAlignment="Top" Width="91" Click="ConButtons_Click" Background="#FF77C6E4"/>
+                    <Button x:Name="_78799" Content="Manic Monday" HorizontalAlignment="Left" Margin="10,334,0,0" VerticalAlignment="Top" Width="91" Click="ConButtons_Click" Background="#FF77C6E4"/>
+                    <Button x:Name="_78795" Content="Cheers" HorizontalAlignment="Left" Margin="10,359,0,0" VerticalAlignment="Top" Width="91" Click="ConButtons_Click" Background="#FF77C6E4"/>
+                    <Button x:Name="_78798" Content="Party On" HorizontalAlignment="Left" Margin="10,384,0,0" VerticalAlignment="Top" Width="91" Click="ConButtons_Click" Background="#FF77C6E4"/>
+                    <Button x:Name="_78790" Content="RJB Radio" HorizontalAlignment="Left" Margin="10,409,0,0" VerticalAlignment="Top" Width="91" Click="ConButtons_Click" Background="#FF77C6E4"/>
+                    <Button x:Name="_78622" Content="Kaleid 1" HorizontalAlignment="Left" Margin="313,58,0,0" VerticalAlignment="Top" Width="91" RenderTransformOrigin="-0.213,0.25" Click="ConButtons_Click" Background="#FFF9A7F2"/>
+                    <Button x:Name="_78623" Content="Kaleid 2" HorizontalAlignment="Left" Margin="313,83,0,0" VerticalAlignment="Top" Width="91" Click="ConButtons_Click" Background="#FFF9A7F2"/>
+                    <Button x:Name="_78624" Content="Kaleid 3" HorizontalAlignment="Left" Margin="313,108,0,0" VerticalAlignment="Top" Width="91" Click="ConButtons_Click" Background="#FFF9A7F2"/>
+                    <Button x:Name="_78625" Content="LP" HorizontalAlignment="Left" Margin="313,133,0,0" VerticalAlignment="Top" Width="91" Click="ConButtons_Click" Background="#FFF9A7F2"/>
+                    <Button x:Name="_78724" Content="Paint" HorizontalAlignment="Left" Margin="313,158,0,0" VerticalAlignment="Top" Width="91" Click="ConButtons_Click" Background="#FFF9A7F2"/>
+                    <Button x:Name="_78627" Content="Etch" HorizontalAlignment="Left" Margin="313,183,0,0" VerticalAlignment="Top" Width="91" Click="ConButtons_Click" Background="#FFF9A7F2"/>
+                    <Button x:Name="_78122" Content="Long Light" HorizontalAlignment="Left" Margin="313,208,0,0" VerticalAlignment="Top" Width="91" Click="ConButtons_Click" Background="#FFF9A7F2"/>
+                    <Button x:Name="_78037" Content="Blue" HorizontalAlignment="Left" Margin="123,259,0,0" VerticalAlignment="Top" Width="60" Click="ConButtons_Click" Background="#FF569DCF"/>
+                    <Button x:Name="_78036" Content="Cyan" HorizontalAlignment="Left" Margin="123,284,0,0" VerticalAlignment="Top" Width="60" Click="ConButtons_Click" Background="#FF75E8D3"/>
+                    <Button x:Name="_78033" Content="Green" HorizontalAlignment="Left" Margin="123,309,0,0" VerticalAlignment="Top" Width="60" Click="ConButtons_Click" Background="#FF4FD13A"/>
+                    <Button x:Name="_78032" Content="Yellow" HorizontalAlignment="Left" Margin="123,334,0,0" VerticalAlignment="Top" Width="60" Click="ConButtons_Click" Background="#FFDEE81A"/>
+                    <Button x:Name="_78029" Content="Orange" HorizontalAlignment="Left" Margin="123,359,0,0" VerticalAlignment="Top" Width="60" Click="ConButtons_Click" Background="#FFFFA96E"/>
+                    <Button x:Name="_78028" Content="White" HorizontalAlignment="Left" Margin="123,384,0,0" VerticalAlignment="Top" Width="60" Click="ConButtons_Click" Background="#FFFDFDFD"/>
+                    <Label Content="Floors 2" HorizontalAlignment="Left" Margin="502,0,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" Height="34"/>
+                    <Button x:Name="_78109" Content="Off" HorizontalAlignment="Left" Margin="407,59,0,0" VerticalAlignment="Top" Width="36" Background="#FFFF5858" Click="ConButtons_Click"/>
+                    <Button x:Name="_78112" Content="Off" HorizontalAlignment="Left" Margin="407,84,0,0" VerticalAlignment="Top" Width="36" Click="ConButtons_Click" Background="#FFFF5858"/>
+                    <Button x:Name="_78113" Content="Off" HorizontalAlignment="Left" Margin="407,109,0,0" VerticalAlignment="Top" Width="36" Click="ConButtons_Click" Background="#FFFF5858"/>
+                    <Label Content="HL" HorizontalAlignment="Left" Margin="133,225,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" Height="34"/>
+                    <Button x:Name="_78146" Content="Blue" HorizontalAlignment="Left" Margin="223,259,0,0" VerticalAlignment="Top" Width="60" Click="ConButtons_Click" Background="#FF569DCF"/>
+                    <Button x:Name="_78147" Content="Cyan" HorizontalAlignment="Left" Margin="223,284,0,0" VerticalAlignment="Top" Width="60" Click="ConButtons_Click" Background="#FF75E8D3"/>
+                    <Button x:Name="_78148" Content="Green" HorizontalAlignment="Left" Margin="223,309,0,0" VerticalAlignment="Top" Width="60" Click="ConButtons_Click" Background="#FF4FD13A"/>
+                    <Button x:Name="_78149" Content="Yellow" HorizontalAlignment="Left" Margin="223,334,0,0" VerticalAlignment="Top" Width="60" Click="ConButtons_Click" Background="#FFDEE81A"/>
+                    <Button x:Name="_78150" Content="Orange" HorizontalAlignment="Left" Margin="223,359,0,0" VerticalAlignment="Top" Width="60" Click="ConButtons_Click" Background="#FFFFA96E"/>
+                    <Button x:Name="_78151" Content="White" HorizontalAlignment="Left" Margin="223,384,0,0" VerticalAlignment="Top" Width="60" Click="ConButtons_Click" Background="#FFFDFDFD"/>
+                    <Label Content="BL" HorizontalAlignment="Left" Margin="248,225,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" Height="34"/>
                     <Button x:Name="_78039" Content="HL" HorizontalAlignment="Left" Margin="188,259,0,0" VerticalAlignment="Top" Width="30" RenderTransformOrigin="0,0.6" Height="45" Background="#FFFF5858" Click="ConButtons_Click"/>
-                    <Button x:Name="_78145" Content="BL" HorizontalAlignment="Left" Margin="188,384,0,0" VerticalAlignment="Top" Width="30" RenderTransformOrigin="0,0.6" Height="45" Background="#FFFF5858" Click="ConButtons_Click"/>
-                    <Button x:Name="_78345" Content="Eye Spin" HorizontalAlignment="Left" Margin="298,34,0,0" VerticalAlignment="Top" Width="91" RenderTransformOrigin="-0.213,0.25" Click="ConButtons_Click"/>
-                    <Button x:Name="_78347" Content="O Eye" HorizontalAlignment="Left" Margin="298,59,0,0" VerticalAlignment="Top" Width="91" Click="ConButtons_Click"/>
-                    <Button x:Name="_78349" Content="O Pyc" HorizontalAlignment="Left" Margin="298,84,0,0" VerticalAlignment="Top" Width="91" Click="ConButtons_Click"/>
-                    <Button x:Name="_78351" Content="B Pyc" HorizontalAlignment="Left" Margin="298,109,0,0" VerticalAlignment="Top" Width="91" Click="ConButtons_Click"/>
-                    <Button x:Name="_78353" Content="Bubbles" HorizontalAlignment="Left" Margin="298,134,0,0" VerticalAlignment="Top" Width="91" Click="ConButtons_Click"/>
-                    <Button x:Name="_78355" Content="Paw" HorizontalAlignment="Left" Margin="298,159,0,0" VerticalAlignment="Top" Width="91" Click="ConButtons_Click"/>
-                    <Button x:Name="_78357" Content="O Swirl" HorizontalAlignment="Left" Margin="298,184,0,0" VerticalAlignment="Top" Width="91" Click="ConButtons_Click"/>
-                    <Label Content="Floors 2" HorizontalAlignment="Left" Margin="308,0,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" Height="34"/>
-                    <Button x:Name="_78346" Content="Off" HorizontalAlignment="Left" Margin="259,34,0,0" VerticalAlignment="Top" Width="36" Background="#FFFF5858" Click="ConButtons_Click"/>
-                    <Button x:Name="_78348" Content="Off" HorizontalAlignment="Left" Margin="259,59,0,0" VerticalAlignment="Top" Width="36" Click="ConButtons_Click" Background="#FFFF5858"/>
-                    <Button x:Name="_78350" Content="Off" HorizontalAlignment="Left" Margin="259,84,0,0" VerticalAlignment="Top" Width="36" Click="ConButtons_Click" Background="#FFFF5858"/>
-                    <Button x:Name="_78359" Content="G Swirl" HorizontalAlignment="Left" Margin="298,209,0,0" VerticalAlignment="Top" Width="91" Click="ConButtons_Click"/>
-                    <Button x:Name="_78352" Content="Off" HorizontalAlignment="Left" Margin="259,108,0,0" VerticalAlignment="Top" Width="36" Click="ConButtons_Click" Background="#FFFF5858"/>
-                    <Button x:Name="_78354" Content="Off" HorizontalAlignment="Left" Margin="259,135,0,0" VerticalAlignment="Top" Width="36" Background="#FFFF5858" Click="ConButtons_Click"/>
-                    <Button x:Name="_78356" Content="Off" HorizontalAlignment="Left" Margin="259,160,0,0" VerticalAlignment="Top" Width="36" Click="ConButtons_Click" Background="#FFFF5858"/>
-                    <Button x:Name="_78358" Content="Off" HorizontalAlignment="Left" Margin="259,185,0,0" VerticalAlignment="Top" Width="36" Click="ConButtons_Click" Background="#FFFF5858"/>
-                    <Button x:Name="_78360" Content="Off" HorizontalAlignment="Left" Margin="259,209,0,0" VerticalAlignment="Top" Width="36" Click="ConButtons_Click" Background="#FFFF5858"/>
+                    <Button x:Name="_78145" Content="BL" HorizontalAlignment="Left" Margin="188,360,0,0" VerticalAlignment="Top" Width="30" RenderTransformOrigin="0,0.6" Height="45" Background="#FFFF5858" Click="ConButtons_Click"/>
+                    <Button x:Name="_78345" Content="Eye Spin" HorizontalAlignment="Left" Margin="492,34,0,0" VerticalAlignment="Top" Width="91" RenderTransformOrigin="-0.213,0.25" Click="ConButtons_Click" Background="#FFF9A7F2"/>
+                    <Button x:Name="_78347" Content="O Eye" HorizontalAlignment="Left" Margin="492,59,0,0" VerticalAlignment="Top" Width="91" Click="ConButtons_Click" Background="#FFFFA96E"/>
+                    <Button x:Name="_78349" Content="O Pyc" HorizontalAlignment="Left" Margin="492,84,0,0" VerticalAlignment="Top" Width="91" Click="ConButtons_Click" Background="#FFFFA96E"/>
+                    <Button x:Name="_78351" Content="B Pyc" HorizontalAlignment="Left" Margin="492,109,0,0" VerticalAlignment="Top" Width="91" Click="ConButtons_Click" Background="#FF569DCF"/>
+                    <Button x:Name="_78353" Content="Bubbles" HorizontalAlignment="Left" Margin="492,134,0,0" VerticalAlignment="Top" Width="91" Click="ConButtons_Click" Background="#FFF9A7F2"/>
+                    <Button x:Name="_78355" Content="Paw" HorizontalAlignment="Left" Margin="492,159,0,0" VerticalAlignment="Top" Width="91" Click="ConButtons_Click" Background="#FFF9A7F2"/>
+                    <Button x:Name="_78357" Content="O Swirl" HorizontalAlignment="Left" Margin="492,184,0,0" VerticalAlignment="Top" Width="91" Click="ConButtons_Click" Background="#FFFFA96E"/>
+                    <Label Content="Floors 1" HorizontalAlignment="Left" Margin="326,0,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" Height="34"/>
+                    <Button x:Name="_78346" Content="Off" HorizontalAlignment="Left" Margin="454,34,0,0" VerticalAlignment="Top" Width="36" Background="#FFFF5858" Click="ConButtons_Click"/>
+                    <Button x:Name="_78348" Content="Off" HorizontalAlignment="Left" Margin="454,59,0,0" VerticalAlignment="Top" Width="36" Click="ConButtons_Click" Background="#FFFF5858"/>
+                    <Button x:Name="_78350" Content="Off" HorizontalAlignment="Left" Margin="454,84,0,0" VerticalAlignment="Top" Width="36" Click="ConButtons_Click" Background="#FFFF5858"/>
+                    <Button x:Name="_78359" Content="G Swirl" HorizontalAlignment="Left" Margin="492,209,0,0" VerticalAlignment="Top" Width="91" Click="ConButtons_Click" Background="#FF4FD13A"/>
+                    <Button x:Name="_78352" Content="Off" HorizontalAlignment="Left" Margin="454,108,0,0" VerticalAlignment="Top" Width="36" Click="ConButtons_Click" Background="#FFFF5858"/>
+                    <Button x:Name="_78354" Content="Off" HorizontalAlignment="Left" Margin="454,134,0,0" VerticalAlignment="Top" Width="36" Background="#FFFF5858" Click="ConButtons_Click"/>
+                    <Button x:Name="_78356" Content="Off" HorizontalAlignment="Left" Margin="454,159,0,0" VerticalAlignment="Top" Width="36" Click="ConButtons_Click" Background="#FFFF5858"/>
+                    <Button x:Name="_78358" Content="Off" HorizontalAlignment="Left" Margin="454,184,0,0" VerticalAlignment="Top" Width="36" Click="ConButtons_Click" Background="#FFFF5858"/>
+                    <Button x:Name="_78360" Content="Off" HorizontalAlignment="Left" Margin="454,209,0,0" VerticalAlignment="Top" Width="36" Click="ConButtons_Click" Background="#FFFF5858"/>
+                    <Button x:Name="_78715" Content="s103" HorizontalAlignment="Left" Margin="133,34,0,0" VerticalAlignment="Top" Width="91" RenderTransformOrigin="-0.213,0.25" Click="ConButtons_Click" Background="#FFFDFDFD"/>
+                    <Button x:Name="_78716" Content="s122" HorizontalAlignment="Left" Margin="133,59,0,0" VerticalAlignment="Top" Width="91" Click="ConButtons_Click" Background="#FFFDFDFD"/>
+                    <Button x:Name="_78717" Content="s140" HorizontalAlignment="Left" Margin="133,84,0,0" VerticalAlignment="Top" Width="91" Click="ConButtons_Click" Background="#FFFDFDFD"/>
+                    <Button x:Name="_78718" Content="pB118" HorizontalAlignment="Left" Margin="133,109,0,0" VerticalAlignment="Top" Width="91" Click="ConButtons_Click" Background="#FF569DCF"/>
+                    <Button x:Name="_78626" Content="pO118" HorizontalAlignment="Left" Margin="133,134,0,0" VerticalAlignment="Top" Width="91" Click="ConButtons_Click" Background="#FFFFA96E"/>
+                    <Button x:Name="_78835" Content="pO126h" HorizontalAlignment="Left" Margin="133,159,0,0" VerticalAlignment="Top" Width="91" Click="ConButtons_Click" Background="#FFFFA96E"/>
+                    <Button x:Name="_79144" Content="pB126" HorizontalAlignment="Left" Margin="133,184,0,0" VerticalAlignment="Top" Width="91" Click="ConButtons_Click" Background="#FF569DCF"/>
+                    <Label Content="Strobe &amp; Pulse" HorizontalAlignment="Left" Margin="143,0,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" Height="34"/>
+                    <Button x:Name="_78719" Content="Off" HorizontalAlignment="Left" Margin="227,34,0,0" VerticalAlignment="Top" Width="51" Background="#FFFF5858" Click="ConButtons_Click" Height="170"/>
+                    <Button x:Name="_78107" Content="Siren" HorizontalAlignment="Left" Margin="313,34,0,0" VerticalAlignment="Top" Width="91" Click="ConButtons_Click" Background="#FFF9A7F2"/>
+                    <Button x:Name="_78108" Content="Off" HorizontalAlignment="Left" Margin="407,34,0,0" VerticalAlignment="Top" Width="36" Click="ConButtons_Click" Background="#FFFF5858"/>
+                    <Button x:Name="_78117" Content="Off" HorizontalAlignment="Left" Margin="407,158,0,0" VerticalAlignment="Top" Width="36" Background="#FFFF5858" Click="ConButtons_Click"/>
+                    <Button x:Name="_78120" Content="Off" HorizontalAlignment="Left" Margin="407,183,0,0" VerticalAlignment="Top" Width="36" Click="ConButtons_Click" Background="#FFFF5858"/>
+                    <Button x:Name="_78121" Content="Off" HorizontalAlignment="Left" Margin="407,208,0,0" VerticalAlignment="Top" Width="36" Click="ConButtons_Click" Background="#FFFF5858"/>
+                    <Button x:Name="_78116" Content="Off" HorizontalAlignment="Left" Margin="407,134,0,0" VerticalAlignment="Top" Width="36" Click="ConButtons_Click" Background="#FFFF5858"/>
+                    <Label Content="Fountains" HorizontalAlignment="Left" Margin="337,251,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" Height="34"/>
+                    <Button x:Name="_78110" Content="Spam" HorizontalAlignment="Left" Margin="313,284,0,0" VerticalAlignment="Top" Width="60" Click="ConButtons_Click" Background="#FFA2F1A2"/>
+                    <Button x:Name="_78115" Content="Nuts" HorizontalAlignment="Left" Margin="381,284,0,0" VerticalAlignment="Top" Width="60" Click="ConButtons_Click" Background="#FFA2F1A2"/>
+                    <Label Content="Spots" HorizontalAlignment="Left" Margin="512,251,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" Height="34"/>
+                    <Button x:Name="_78009" Content="Spot 1" HorizontalAlignment="Left" Margin="486,284,0,0" VerticalAlignment="Top" Width="69" Click="ConButtons_Click" Background="#FF70D0FD"/>
+                    <Button x:Name="_78010" Content="Off" HorizontalAlignment="Left" Margin="558,284,0,0" VerticalAlignment="Top" Width="36" Click="ConButtons_Click" Background="#FFFF5858"/>
+                    <Button x:Name="_78011" Content="Spot 2" HorizontalAlignment="Left" Margin="486,309,0,0" VerticalAlignment="Top" Width="69" Click="ConButtons_Click" Background="#FF70D0FD"/>
+                    <Button x:Name="_78012" Content="Off" HorizontalAlignment="Left" Margin="558,309,0,0" VerticalAlignment="Top" Width="36" Click="ConButtons_Click" Background="#FFFF5858"/>
+                    <Button x:Name="_78111" Content="Old Spice" HorizontalAlignment="Left" Margin="313,309,0,0" VerticalAlignment="Top" Width="60" Click="ConButtons_Click" Background="#FFA2F1A2"/>
+                    <Button x:Name="_78118" Content="Ice" HorizontalAlignment="Left" Margin="381,309,0,0" VerticalAlignment="Top" Width="60" Click="ConButtons_Click" Background="#FFA2F1A2"/>
+                    <Button x:Name="_78114" Content="Pizza" HorizontalAlignment="Left" Margin="313,334,0,0" VerticalAlignment="Top" Width="60" Click="ConButtons_Click" Background="#FFA2F1A2"/>
+                    <Button x:Name="_78119" Content="Confetti" HorizontalAlignment="Left" Margin="381,334,0,0" VerticalAlignment="Top" Width="60" Click="ConButtons_Click" Background="#FFA2F1A2"/>
+                    <Button x:Name="_79140" Content="Donuts" HorizontalAlignment="Left" Margin="313,358,0,0" VerticalAlignment="Top" Width="60" Click="ConButtons_Click" Background="#FFA2F1A2"/>
+                    <Label Content="Lights" HorizontalAlignment="Left" Margin="178,225,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" Height="34" Foreground="#FF1B40BF"/>
                 </Grid>
             </TabItem>
-            <TabItem Header="TabItem">
+            <TabItem Header="Future">
                 <Grid Background="#FFE5E5E5"/>
             </TabItem>
         </TabControl>
-        <Button x:Name="butMoveTo" Content="Move To" HorizontalAlignment="Left" Margin="261,98,0,0" VerticalAlignment="Top" Width="120" Height="23" Click="butMoveTo_Click"/>
-        <Button x:Name="butLoadProp" Content="Load Prop" HorizontalAlignment="Left" Margin="401,98,0,0" VerticalAlignment="Top" Width="75" Height="23" Click="butLoadProp_Click"/>
-        <Button x:Name="butPropCheck" Content="Check" HorizontalAlignment="Left" Margin="488,98,0,0" VerticalAlignment="Top" Width="49" Click="butPropCheck_Click" Height="23"/>
-        <Button x:Name="butGetID" Content="GetID" HorizontalAlignment="Left" Margin="488,70,0,0" VerticalAlignment="Top" Width="49" Height="23" Click="butPropCheck_Copy_Click"/>
+        <Button x:Name="butMoveTo" Content="Move To Coords" HorizontalAlignment="Left" Margin="261,98,0,0" VerticalAlignment="Top" Width="120" Height="23" Click="butMoveTo_Click"/>
+        <Button x:Name="butLoadProp" Content="Load Prop" HorizontalAlignment="Left" Margin="401,98,0,0" VerticalAlignment="Top" Width="75" Height="23" Click="butLoadProp_Click" Grid.ColumnSpan="2" IsEnabled="False"/>
+        <Button x:Name="butPropCheck" Content="Check" HorizontalAlignment="Left" Margin="52,98,0,0" VerticalAlignment="Top" Width="49" Click="butPropCheck_Click" Height="23" Grid.Column="1" IsEnabled="False"/>
+        <Button x:Name="butGetID" Content="GetID" HorizontalAlignment="Left" Margin="52,70,0,0" VerticalAlignment="Top" Width="49" Height="23" Click="butPropCheck_Copy_Click" Grid.Column="1"/>
 
     </Grid>
 </Window>

@@ -368,7 +368,15 @@ namespace ConSoul
 
         private void butMoveTo_Click(object sender, RoutedEventArgs e)
         {
-            // read coords
+            string go = textCoords.Text;
+            Coords go2 = ConvertCoords(go);
+
+            _instance.Attributes.MyX = go2.x;
+            _instance.Attributes.MyY = go2.y;
+            _instance.Attributes.MyZ = go2.z;
+            _instance.Attributes.MyYaw = go2.yaw;
+            Status("Moving to coords " + go);
+            _instance.StateChange();
 
         }
 
@@ -448,6 +456,12 @@ namespace ConSoul
 
         private void ConButtons_Click(object sender, RoutedEventArgs e)
         {
+
+            if (Globals.iInWorld == false)
+            {
+                return;
+            }
+
             Button b = (Button)sender;
             string who = b.Name.ToString();
             //Console.WriteLine("Button " + who + " sent me here.");
