@@ -19,13 +19,12 @@
         <Label Content="Avatar:" HorizontalAlignment="Left" Margin="210,38,0,0" VerticalAlignment="Top" Height="26" Width="46"/>
         <TextBox x:Name="textBotname" HorizontalAlignment="Left" Height="23" Margin="70,14,0,0" TextWrapping="Wrap" Text="ConSoul" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="textCitnum" HorizontalAlignment="Left" Height="23" Margin="70,42,0,0" TextWrapping="Wrap" Text="318855" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="textPrivPass" HorizontalAlignment="Left" Height="23" Margin="70,70,0,0" TextWrapping="Wrap" Text="test" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="textWorld" HorizontalAlignment="Left" Height="23" Margin="261,14,0,0" TextWrapping="Wrap" Text="Simulator" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="textAvatar" HorizontalAlignment="Left" Height="23" Margin="261,42,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="47"/>
         <TextBox x:Name="textCoords" HorizontalAlignment="Left" Height="23" Margin="261,70,0,0" TextWrapping="Wrap" Text="0n 0w 0a 0" VerticalAlignment="Top" Width="120"/>
         <Button x:Name="butChange" Content="Change" HorizontalAlignment="Left" Margin="315,42,0,0" VerticalAlignment="Top" Width="66" Height="22" Click="butChange_Click"/>
         <Button x:Name="butLogOut" Content="Log Out" HorizontalAlignment="Left" Margin="401,42,0,0" VerticalAlignment="Top" Width="75" Height="23" Click="butLogOut_Click" Grid.ColumnSpan="2"/>
-        <Button x:Name="butLogIn" Content="Log In" HorizontalAlignment="Left" Margin="401,14,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="-0.334,1.044" Height="23" Click="butLogIn_Click" Grid.ColumnSpan="2"/>
+        <Button x:Name="butLogIn" Content="Log In" HorizontalAlignment="Left" Margin="401,14,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="-0.334,1.044" Height="23" Click="butLogIn_Click" Grid.ColumnSpan="2" IsDefault="True"/>
         <Button x:Name="butAddTrig" Content="Add a Trigger" HorizontalAlignment="Left" Margin="113,14,0,0" VerticalAlignment="Top" Width="103" Height="23" IsEnabled="False" Grid.Column="1"/>
         <Button x:Name="butEditTrig" Content="Edit a Trigger" HorizontalAlignment="Left" Margin="113,42,0,0" VerticalAlignment="Top" Width="103" Height="22" IsEnabled="False" Grid.Column="1"/>
         <Button x:Name="butDeleteTrig" Content="Delete a Trigger" HorizontalAlignment="Left" Margin="113,98,0,0" VerticalAlignment="Top" Width="103" Height="23" IsEnabled="False" Grid.Column="1"/>
@@ -137,6 +136,7 @@
         <Button x:Name="butLoadProp" Content="Load Prop" HorizontalAlignment="Left" Margin="401,98,0,0" VerticalAlignment="Top" Width="75" Height="23" Click="butLoadProp_Click" Grid.ColumnSpan="2" IsEnabled="False"/>
         <Button x:Name="butPropCheck" Content="Check" HorizontalAlignment="Left" Margin="52,98,0,0" VerticalAlignment="Top" Width="49" Click="butPropCheck_Click" Height="23" Grid.Column="1" IsEnabled="False"/>
         <Button x:Name="butGetID" Content="GetID" HorizontalAlignment="Left" Margin="52,70,0,0" VerticalAlignment="Top" Width="49" Height="23" Click="butPropCheck_Copy_Click" Grid.Column="1"/>
+        <PasswordBox x:Name="textPrivPass" HorizontalAlignment="Left" Margin="70,70,0,0" VerticalAlignment="Top" Width="120" Height="23"/>
 
     </Grid>
 </Window>

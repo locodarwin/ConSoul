@@ -53,13 +53,15 @@ namespace ConSoul
 
             textBotname.Text = Globals.sBotName;
             textCitnum.Text = Convert.ToString(Globals.iCitNum);
-            textPrivPass.Text = Globals.sPassword;
+            textPrivPass.Password = Globals.sPassword;
             textWorld.Text = Globals.sWorld;
             textCoords.Text = Globals.sCoords;
             textAvatar.Text = Convert.ToString(Globals.iAV);
 
             toolStatus.Background = Brushes.Salmon;
             butLogOut.IsEnabled = false;
+            butChange.IsEnabled = false;
+            butMoveTo.IsEnabled = false;
 
 
             // The AW message queue timer
@@ -90,7 +92,7 @@ namespace ConSoul
             */
 
 
-
+            
         }
 
 
@@ -147,7 +149,7 @@ namespace ConSoul
             // Grab the contents of the controls and put them into the globals
             Globals.sBotName = textBotname.Text;
             Globals.iCitNum = Convert.ToInt32(textCitnum.Text);
-            Globals.sPassword = textPrivPass.Text;
+            Globals.sPassword = textPrivPass.Password;
             Globals.sWorld = textWorld.Text;
             Globals.sCoords = textCoords.Text;
             Coords coords = ConvertCoords(Globals.sCoords);
@@ -183,6 +185,8 @@ namespace ConSoul
             butLogIn.IsEnabled = true;
             butConfig.IsEnabled = true;
             butLogOut.IsEnabled = false;
+            butChange.IsEnabled = false;
+            butMoveTo.IsEnabled = false;
 
             Globals.iInUniv = false;
             Globals.iInWorld = false;
@@ -329,6 +333,8 @@ namespace ConSoul
                 toolStatus.Background = Brushes.LightGreen;
                 //toolLoggedIn.Text = "Logged In";
                 butLogOut.IsEnabled = true;
+                butMoveTo.IsEnabled = true;
+                butChange.IsEnabled = true;
                 Status("Logged in.");
             }
             else
@@ -337,6 +343,8 @@ namespace ConSoul
                 //toolLoggedIn.Text = "Logged Out";
                 butLogIn.IsEnabled = true;
                 butConfig.IsEnabled = true;
+                butChange.IsEnabled = false;
+                butMoveTo.IsEnabled = false;
                 Status("Failed to log in.");
             }
 
