@@ -126,6 +126,12 @@
                     <Button x:Name="_78119" Content="Confetti" HorizontalAlignment="Left" Margin="381,334,0,0" VerticalAlignment="Top" Width="60" Click="ConButtons_Click" Background="#FFA2F1A2"/>
                     <Button x:Name="_79140" Content="Donuts" HorizontalAlignment="Left" Margin="313,358,0,0" VerticalAlignment="Top" Width="60" Click="ConButtons_Click" Background="#FFA2F1A2"/>
                     <Label Content="Lights" HorizontalAlignment="Left" Margin="178,225,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" Height="34" Foreground="#FF1B40BF"/>
+                    <Button x:Name="_78014" Content="Spot 3" HorizontalAlignment="Left" Margin="486,334,0,0" VerticalAlignment="Top" Width="69" Click="ConButtons_Click" Background="#FF70D0FD"/>
+                    <Button x:Name="_78013" Content="Off" HorizontalAlignment="Left" Margin="558,334,0,0" VerticalAlignment="Top" Width="36" Click="ConButtons_Click" Background="#FFFF5858"/>
+                    <Button x:Name="_78015" Content="Spot 4" HorizontalAlignment="Left" Margin="486,359,0,0" VerticalAlignment="Top" Width="69" Click="ConButtons_Click" Background="#FF70D0FD"/>
+                    <Button x:Name="_78016" Content="Off" HorizontalAlignment="Left" Margin="558,359,0,0" VerticalAlignment="Top" Width="36" Click="ConButtons_Click" Background="#FFFF5858"/>
+                    <Button x:Name="_78020" Content="Spot 5" HorizontalAlignment="Left" Margin="486,384,0,0" VerticalAlignment="Top" Width="69" Click="ConButtons_Click" Background="#FF70D0FD"/>
+                    <Button x:Name="_78021" Content="Off" HorizontalAlignment="Left" Margin="558,384,0,0" VerticalAlignment="Top" Width="36" Click="ConButtons_Click" Background="#FFFF5858"/>
                 </Grid>
             </TabItem>
             <TabItem Header="Future">
